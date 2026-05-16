@@ -1,6 +1,6 @@
 --------------------------------------------------
 
-Project Overview
+# Project Overview
 
 RAVYA is built using React + TypeScript + Vite and provides a modern frontend development setup with Hot Module Replacement (HMR), TypeScript support and ESLint integration.
 
