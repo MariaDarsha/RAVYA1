@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --primary: 199 89% 48%;
+    --accent: 258 90% 66%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+  }
+
+  body {
+    @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  
+  .dark-glass {
+    @apply bg-black/40 backdrop-blur-lg border border-white/10 shadow-2xl;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-full bg-primary-600 hover:bg-primary-700 text-white font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-primary-500/20;
+  }
+
+  .btn-accent {
+    @apply px-6 py-3 rounded-full bg-accent-600 hover:bg-accent-700 text-white font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-accent-500/20;
+  }
+
+  .nav-link {
+    @apply text-slate-600 dark:text-slate-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors duration-200 font-medium;
+  }
+}
+
+.animate-glow {
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(14, 165, 233, 0.2); }
+  to { box-shadow: 0 0 25px rgba(139, 92, 246, 0.4); }
+}
